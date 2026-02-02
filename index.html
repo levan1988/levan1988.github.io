@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Levan | Portfolio</title>
+  <title>Levan Tamazashvili | Portfolio</title>
   <style>
     :root{
       --bg:#0b1020;
@@ -92,6 +92,7 @@
       background:rgba(255,255,255,.03);
       transition:.2s;
       font-weight:600;
+      cursor:pointer;
     }
     .btn.primary{
       background:linear-gradient(135deg, rgba(94,234,212,.22), rgba(96,165,250,.18));
@@ -140,6 +141,25 @@
       text-align:center;
       font-size:13px;
     }
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .muted{color:var(--muted)}
+    .kpi{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:10px;
+      padding:12px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      margin-top:10px;
+    }
   </style>
 </head>
 <body>
@@ -148,122 +168,186 @@
     <div class="topbar">
       <div class="logo">
         <span class="dot"></span>
-        <span>levan1988</span>
+        <span>Levan Tamazashvili</span>
       </div>
       <div class="nav">
         <a class="pill" href="https://github.com/levan1988" target="_blank">GitHub</a>
-        <a class="pill" href="#proyectos">Proyectos</a>
-        <a class="pill" href="#contacto">Contacto</a>
+        <a class="pill" href="https://www.linkedin.com/in/levantamazashvili" target="_blank">LinkedIn</a>
+        <a class="pill" href="#experience">Experience</a>
+        <a class="pill" href="#certifications">Certifications</a>
       </div>
     </div>
 
     <div class="hero">
       <div class="card">
-        <h1 class="title">Hola 👋 Soy Levan</h1>
+        <h1 class="title">IT Support & Microsoft 365</h1>
         <p class="subtitle">
-          Bienvenido a mi portfolio. Aquí muestro mis proyectos, habilidades y enlaces importantes.
-          Esta web está alojada gratis con <b>GitHub Pages</b>.
+          This is my personal portfolio, based on my CV and my GitHub profile.
+          Here you can find my experience, skills and certifications.
         </p>
 
         <div class="badges">
-          <span class="badge">💻 Desarrollo</span>
-          <span class="badge">📚 Aprendiendo cada día</span>
-          <span class="badge">🚀 Proyectos en GitHub</span>
+          <span class="badge">Microsoft 365</span>
+          <span class="badge">Windows</span>
+          <span class="badge">Networking</span>
+          <span class="badge">Helpdesk</span>
         </div>
 
         <div class="cta">
-          <a class="btn primary" href="https://github.com/levan1988" target="_blank">⭐ Ver mi GitHub</a>
-          <a class="btn" href="#proyectos">📌 Ver proyectos</a>
+          <a class="btn primary" href="cv.pdf" download>⬇️ Download CV</a>
+          <a class="btn" href="https://github.com/levan1988" target="_blank">⭐ GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/levantamazashvili" target="_blank">🔗 LinkedIn</a>
+        </div>
+
+        <div class="kpi">
+          <div>
+            <b>Location</b><br/>
+            <span class="muted">Spain</span>
+          </div>
+          <span class="tag">Open to opportunities</span>
         </div>
       </div>
 
       <div class="card">
-        <h2 style="margin:0 0 8px 0;">📌 Info rápida</h2>
+        <h2 style="margin:0 0 8px 0;">Quick Summary</h2>
         <div class="grid" style="grid-template-columns:1fr; margin-top:10px;">
           <div class="mini">
-            <h3>📍 Ubicación</h3>
-            <p>España</p>
+            <h3>About me</h3>
+            <p>
+              Practical IT profile focused on user support, troubleshooting,
+              Microsoft 365 administration and improving workflows.
+            </p>
           </div>
           <div class="mini">
-            <h3>🧠 Intereses</h3>
-            <p>Web, tecnología, automatización</p>
+            <h3>Main tools</h3>
+            <p>
+              Microsoft 365 • Windows • Active Directory • Ticketing • Remote Support
+            </p>
           </div>
           <div class="mini">
-            <h3>🛠️ Stack</h3>
-            <p>HTML • CSS • JavaScript</p>
+            <h3>Languages</h3>
+            <p>
+              English • Spanish
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="section" id="proyectos">
+    <div class="section" id="experience">
       <div class="card">
-        <h2 style="margin:0;">🚀 Proyectos</h2>
-        <p class="subtitle" style="margin-top:6px;">Añade aquí tus repos más importantes.</p>
-
-        <ul class="list">
-          <li class="item">
-            <div>
-              <b>Proyecto 1</b><br/>
-              <small>Descripción corta del proyecto</small>
-            </div>
-            <a class="pill" href="https://github.com/levan1988" target="_blank">Ver</a>
-          </li>
-
-          <li class="item">
-            <div>
-              <b>Proyecto 2</b><br/>
-              <small>Descripción corta del proyecto</small>
-            </div>
-            <a class="pill" href="https://github.com/levan1988" target="_blank">Ver</a>
-          </li>
-
-          <li class="item">
-            <div>
-              <b>Proyecto 3</b><br/>
-              <small>Descripción corta del proyecto</small>
-            </div>
-            <a class="pill" href="https://github.com/levan1988" target="_blank">Ver</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="card" id="contacto">
-        <h2 style="margin:0;">📩 Contacto</h2>
+        <h2 style="margin:0;">💼 Experience</h2>
         <p class="subtitle" style="margin-top:6px;">
-          Puedes encontrarme aquí:
+          (I can fill this section with exact company names/dates from your CV if you want.)
         </p>
 
         <ul class="list">
           <li class="item">
             <div>
-              <b>GitHub</b><br/>
-              <small>@levan1988</small>
+              <b>IT Support / Helpdesk</b><br/>
+              <small>Incident management, troubleshooting, end-user support</small>
             </div>
-            <a class="pill" href="https://github.com/levan1988" target="_blank">Abrir</a>
+            <span class="tag">Support</span>
           </li>
-
           <li class="item">
             <div>
-              <b>Email</b><br/>
-              <small>pon-tu-email-aqui@gmail.com</small>
+              <b>Microsoft 365 Administration</b><br/>
+              <small>User management, permissions, basic security and services</small>
             </div>
-            <a class="pill" href="mailto:pon-tu-email-aqui@gmail.com">Enviar</a>
+            <span class="tag">M365</span>
           </li>
+          <li class="item">
+            <div>
+              <b>Hardware & Software</b><br/>
+              <small>Installations, configurations, maintenance</small>
+            </div>
+            <span class="tag">IT</span>
+          </li>
+        </ul>
+      </div>
 
+      <div class="card" id="certifications">
+        <h2 style="margin:0;">📜 Certifications</h2>
+        <p class="subtitle" style="margin-top:6px;">
+          (Translated to English as requested)
+        </p>
+
+        <ul class="list">
+          <li class="item">
+            <div>
+              <b>Spanish Language Certificate</b><br/>
+              <small>Official certification (translated from Spanish)</small>
+            </div>
+            <span class="tag">Language</span>
+          </li>
+          <li class="item">
+            <div>
+              <b>Other Certifications</b><br/>
+              <small>Add your real certifications here and I will format them</small>
+            </div>
+            <span class="tag">Training</span>
+          </li>
+        </ul>
+
+        <div style="margin-top:14px;">
+          <h3 style="margin:0 0 8px 0;">🧩 In preparation</h3>
+          <div class="item">
+            <div>
+              <b>MS-102 (Microsoft 365 Administrator)</b><br/>
+              <small>Currently preparing</small>
+            </div>
+            <span class="tag">In progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="projects">
+      <div class="card">
+        <h2 style="margin:0;">🚀 Projects</h2>
+        <p class="subtitle" style="margin-top:6px;">
+          Selected work from my GitHub.
+        </p>
+
+        <ul class="list">
+          <li class="item">
+            <div>
+              <b>GitHub Profile</b><br/>
+              <small>All repositories and activity</small>
+            </div>
+            <a class="pill" href="https://github.com/levan1988" target="_blank">Open</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card" id="contact">
+        <h2 style="margin:0;">📩 Contact</h2>
+        <p class="subtitle" style="margin-top:6px;">
+          Feel free to reach out:
+        </p>
+
+        <ul class="list">
           <li class="item">
             <div>
               <b>LinkedIn</b><br/>
-              <small>pon-tu-link-aqui</small>
+              <small>levantamazashvili</small>
             </div>
-            <a class="pill" href="#" target="_blank">Abrir</a>
+            <a class="pill" href="https://www.linkedin.com/in/levantamazashvili" target="_blank">Open</a>
+          </li>
+
+          <li class="item">
+            <div>
+              <b>GitHub</b><br/>
+              <small>@levan1988</small>
+            </div>
+            <a class="pill" href="https://github.com/levan1988" target="_blank">Open</a>
           </li>
         </ul>
       </div>
     </div>
 
     <footer>
-      Hecho con ❤️ en GitHub Pages — © 2026
+      © 2026 — Levan Tamazashvili • Hosted on GitHub Pages
     </footer>
 
   </div>

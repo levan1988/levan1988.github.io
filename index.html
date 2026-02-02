@@ -3,43 +3,270 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Levan1988 | Portfolio</title>
+  <title>Levan | Portfolio</title>
   <style>
-    body{font-family:Arial, sans-serif;margin:0;background:#f4f4f4;color:#222}
-    header{background:#111;color:#fff;padding:30px;text-align:center}
-    main{max-width:900px;margin:auto;padding:20px}
-    .card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);margin-bottom:15px}
-    a{color:#0b66ff;text-decoration:none}
-    footer{text-align:center;padding:20px;color:#666}
+    :root{
+      --bg:#0b1020;
+      --card:#111a33;
+      --text:#e8ecff;
+      --muted:#aab3d6;
+      --accent:#5eead4;
+      --accent2:#60a5fa;
+      --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.25), transparent 60%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(94,234,212,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1050px;margin:auto;padding:28px}
+    .topbar{
+      display:flex;justify-content:space-between;align-items:center;
+      gap:12px;margin-bottom:28px;
+    }
+    .logo{
+      display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 0 25px rgba(94,234,212,.35);
+    }
+    .nav{
+      display:flex;gap:14px;flex-wrap:wrap;
+    }
+    .pill{
+      padding:10px 14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:999px;
+      transition:.2s;
+    }
+    .pill:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.18)}
+    .hero{
+      display:grid;
+      grid-template-columns:1.3fr .7fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    .title{
+      font-size:40px;line-height:1.1;margin:0 0 10px 0;
+      letter-spacing:-.6px;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
+    .badges{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:16px
+    }
+    .badge{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .cta{
+      display:flex;gap:12px;flex-wrap:wrap;margin-top:18px
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      transition:.2s;
+      font-weight:600;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(94,234,212,.22), rgba(96,165,250,.18));
+      border-color:rgba(94,234,212,.25);
+    }
+    .btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.18)}
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
+    .mini h3{margin:0 0 6px 0;font-size:16px}
+    .mini p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+    .section{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width:900px){
+      .section{grid-template-columns:1fr}
+    }
+    .list{
+      margin:10px 0 0 0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .item{
+      padding:12px 12px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      display:flex;justify-content:space-between;gap:10px;align-items:center;
+    }
+    .item small{color:var(--muted)}
+    footer{
+      margin-top:26px;
+      color:rgba(255,255,255,.55);
+      text-align:center;
+      font-size:13px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>👋 Hola, soy Levan</h1>
-    <p>Bienvenido a mi página web en GitHub Pages</p>
-  </header>
+  <div class="container">
 
-  <main>
-    <div class="card">
-      <h2>📌 Sobre mí</h2>
-      <p>Este es mi portfolio. Aquí iré añadiendo mis proyectos y enlaces.</p>
+    <div class="topbar">
+      <div class="logo">
+        <span class="dot"></span>
+        <span>levan1988</span>
+      </div>
+      <div class="nav">
+        <a class="pill" href="https://github.com/levan1988" target="_blank">GitHub</a>
+        <a class="pill" href="#proyectos">Proyectos</a>
+        <a class="pill" href="#contacto">Contacto</a>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>💻 Mis proyectos</h2>
-      <ul>
-        <li><a href="https://github.com/levan1988" target="_blank">Mi GitHub</a></li>
-      </ul>
+    <div class="hero">
+      <div class="card">
+        <h1 class="title">Hola 👋 Soy Levan</h1>
+        <p class="subtitle">
+          Bienvenido a mi portfolio. Aquí muestro mis proyectos, habilidades y enlaces importantes.
+          Esta web está alojada gratis con <b>GitHub Pages</b>.
+        </p>
+
+        <div class="badges">
+          <span class="badge">💻 Desarrollo</span>
+          <span class="badge">📚 Aprendiendo cada día</span>
+          <span class="badge">🚀 Proyectos en GitHub</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/levan1988" target="_blank">⭐ Ver mi GitHub</a>
+          <a class="btn" href="#proyectos">📌 Ver proyectos</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;">📌 Info rápida</h2>
+        <div class="grid" style="grid-template-columns:1fr; margin-top:10px;">
+          <div class="mini">
+            <h3>📍 Ubicación</h3>
+            <p>España</p>
+          </div>
+          <div class="mini">
+            <h3>🧠 Intereses</h3>
+            <p>Web, tecnología, automatización</p>
+          </div>
+          <div class="mini">
+            <h3>🛠️ Stack</h3>
+            <p>HTML • CSS • JavaScript</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>📩 Contacto</h2>
-      <p>GitHub: <a href="https://github.com/levan1988" target="_blank">@levan1988</a></p>
-    </div>
-  </main>
+    <div class="section" id="proyectos">
+      <div class="card">
+        <h2 style="margin:0;">🚀 Proyectos</h2>
+        <p class="subtitle" style="margin-top:6px;">Añade aquí tus repos más importantes.</p>
 
-  <footer>
-    © 2026 - Página creada con GitHub Pages
-  </footer>
+        <ul class="list">
+          <li class="item">
+            <div>
+              <b>Proyecto 1</b><br/>
+              <small>Descripción corta del proyecto</small>
+            </div>
+            <a class="pill" href="https://github.com/levan1988" target="_blank">Ver</a>
+          </li>
+
+          <li class="item">
+            <div>
+              <b>Proyecto 2</b><br/>
+              <small>Descripción corta del proyecto</small>
+            </div>
+            <a class="pill" href="https://github.com/levan1988" target="_blank">Ver</a>
+          </li>
+
+          <li class="item">
+            <div>
+              <b>Proyecto 3</b><br/>
+              <small>Descripción corta del proyecto</small>
+            </div>
+            <a class="pill" href="https://github.com/levan1988" target="_blank">Ver</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card" id="contacto">
+        <h2 style="margin:0;">📩 Contacto</h2>
+        <p class="subtitle" style="margin-top:6px;">
+          Puedes encontrarme aquí:
+        </p>
+
+        <ul class="list">
+          <li class="item">
+            <div>
+              <b>GitHub</b><br/>
+              <small>@levan1988</small>
+            </div>
+            <a class="pill" href="https://github.com/levan1988" target="_blank">Abrir</a>
+          </li>
+
+          <li class="item">
+            <div>
+              <b>Email</b><br/>
+              <small>pon-tu-email-aqui@gmail.com</small>
+            </div>
+            <a class="pill" href="mailto:pon-tu-email-aqui@gmail.com">Enviar</a>
+          </li>
+
+          <li class="item">
+            <div>
+              <b>LinkedIn</b><br/>
+              <small>pon-tu-link-aqui</small>
+            </div>
+            <a class="pill" href="#" target="_blank">Abrir</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      Hecho con ❤️ en GitHub Pages — © 2026
+    </footer>
+
+  </div>
 </body>
 </html>
+
